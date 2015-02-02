@@ -15,20 +15,35 @@ title: Logomaker
 <script type="text/javascript">
 	function generateSingle()
 		{
-		alert('generating!');	
+		$value = document.getElementById('single-value').value;
+		$apiurl = "http://logomaker.api.apievangelist.com/single/?value=" + encodeURIComponent($value);
+		
+		$.ajax({
+		url: $apiurl,
+		type: 'POST',
+		data: $postData,
+		success: function(data) {
+
+			$.each(data, function(resourceKey, resourceValue) {
+
+				$logo_url = resourceValue['url'];
+				document.getElementById('single-logo').src = $logo_url;
+				
+				});
+
+			}
+		});
 		}
 </script>
-<table cellpadding="3" cellspacing="2">
+<table cellpadding="3" cellspacing="2" width="100%">
 	<tr>
-		<td>
+		<td width="50%">
 			<strong>value:</strong>
-			<input type="text" size="25" value="" />
-			<input type="button" name="generate" value="generate" onchange="generateSingle();" />
+			<input type="text" size="25" id="single-value" name="single-value" value="" />
+			<input type="button" name="generate" value="generate" onclick="generateSingle();" />
 		</td>
-	</tr>
-	<tr>
-		<td>
-			<img src="http://kinlane-productions.s3.amazonaws.com/logo-2015-02-02-11-58-00.png" width="250" />
+		<td width="50%">
+			<img src="http://kinlane-productions.s3.amazonaws.com/logo-2015-02-02-11-58-00.png" id="single-logo" width="400" />
 		</td>
 	</tr>
 </table>
