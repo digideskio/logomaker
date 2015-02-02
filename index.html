@@ -15,6 +15,9 @@ title: Logomaker
 <script type="text/javascript">
 	function generateSingle()
 		{
+			
+		document.getElementById('single-logo').src = 'http://kinlane-productions.s3.amazonaws.com/logo-2015-02-02-12-20-04.png';	
+			
 		$value = document.getElementById('single-value').value;
 		$apiurl = "http://logomaker.api.apievangelist.com/single/?value=" + encodeURIComponent($value);
 		
@@ -27,7 +30,7 @@ title: Logomaker
 
 				$logo_url = resourceValue['url'];
 				document.getElementById('single-logo').src = $logo_url;
-				
+				document.getElementById('single-url').value = $logo_url;
 				});
 
 			}
@@ -43,6 +46,7 @@ title: Logomaker
 		</td>
 		<td width="50%" align="center" valign="middle">
 			<img src="http://kinlane-productions.s3.amazonaws.com/logo-2015-02-02-11-58-00.png" id="single-logo" width="400" />
+			<textarea rows="2" cols="35" id="single-url"></textarea>
 		</td>
 	</tr>
 </table>
