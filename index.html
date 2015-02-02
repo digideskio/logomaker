@@ -100,7 +100,7 @@ title: Logomaker
 		document.getElementById('function-logo').src = 'http://kinlane-productions.s3.amazonaws.com/logo-2015-02-02-12-20-04.png';	
 			
 		$value = document.getElementById('function-value').value;
-		$apiurl = "http://logomaker.api.apievangelist.com/function/?value=" + encodeURIComponent($value);
+		$apiurl = "http://logomaker.api.apievangelist.com/function/?name=" + encodeURIComponent($value);
 		
 		$.ajax({
 		url: $apiurl,
