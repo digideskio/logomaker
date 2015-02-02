@@ -10,7 +10,7 @@ title: Logomaker
 <p>With the latest batch of t-shirts I've ditched the "logo" portion, but will keep this version floating around, here and there for nostalgic purposes. Along the way, I've added what I consider the function version of the logo, which I use for each of my research sites.</p>
 
 <p>I'm starting so many new research areas lately, I decided to create a logomaker, so I can make new logos, and anyone else can make their own as well. There are three API endpoints for the API Evangelist logomaker API:</p>
-
+<hr />
 <p><strong>Single</strong></p>
 <script type="text/javascript">
 	function generateSingle()
@@ -58,7 +58,7 @@ title: Logomaker
 			
 		document.getElementById('keyvalue-logo').src = 'http://kinlane-productions.s3.amazonaws.com/logo-2015-02-02-12-20-04.png';	
 		
-		$key = document.getElementById('keyvalue-value').value;	
+		$key = document.getElementById('keyvalue-key').value;	
 		$value = document.getElementById('keyvalue-value').value;
 		$apiurl = "http://logomaker.api.apievangelist.com/keyvalue/?key=" + encodeURIComponent($key) + "&value=" + encodeURIComponent($value);
 		
