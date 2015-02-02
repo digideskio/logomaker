@@ -51,5 +51,82 @@ title: Logomaker
 	</tr>
 </table>
 <p><strong>Key / Value</strong></p>
+<script type="text/javascript">
+	function generateKeyValue()
+		{
+			
+		document.getElementById('keyvalue-logo').src = 'http://kinlane-productions.s3.amazonaws.com/logo-2015-02-02-12-20-04.png';	
+		
+		$key = document.getElementById('keyvalue-value').value;	
+		$value = document.getElementById('keyvalue-value').value;
+		$apiurl = "http://logomaker.api.apievangelist.com/keyvalue/?key=" + encodeURIComponent($key) + "&value=" + encodeURIComponent($value);
+		
+		$.ajax({
+		url: $apiurl,
+		type: 'GET',
+		success: function(data) {
 
+			$.each(data, function(resourceKey, resourceValue) {
+
+				$logo_url = resourceValue['url'];
+				document.getElementById('keyvalue-logo').src = $logo_url;
+				document.getElementById('keyvalue-url').value = $logo_url;
+				});
+
+			}
+		});
+		}
+</script>
+<table cellpadding="1" cellspacing="1" width="100%" border="0">
+	<tr>
+		<td width="50%" align="center">
+			<strong>key / vaue:</strong>
+			<input type="text" size="25" id="keyvalue-key" name="keyvalue-key" value="" />
+			<input type="text" size="25" id="keyvalue-value" name="keyvalue-value" value="" />
+			<input type="button" name="generate" value="generate" onclick="generateKeyValue();" />
+		</td>
+		<td width="50%" align="center"><br />
+			<img src="http://kinlane-productions.s3.amazonaws.com/logo-2015-02-02-12-26-06.png" id="keyvalue-logo" width="90%" />
+			<textarea rows="2" cols="35" id="keyvalue-url" style="width: 100%;"></textarea>
+		</td>
+	</tr>
+</table>
 <p><strong>Function</strong></p>
+<script type="text/javascript">
+	function generateFunction()
+		{
+			
+		document.getElementById('function-logo').src = 'http://kinlane-productions.s3.amazonaws.com/logo-2015-02-02-12-20-04.png';	
+			
+		$value = document.getElementById('function-value').value;
+		$apiurl = "http://logomaker.api.apievangelist.com/function/?value=" + encodeURIComponent($value);
+		
+		$.ajax({
+		url: $apiurl,
+		type: 'GET',
+		success: function(data) {
+
+			$.each(data, function(resourceKey, resourceValue) {
+
+				$logo_url = resourceValue['url'];
+				document.getElementById('function-logo').src = $logo_url;
+				document.getElementById('function-url').value = $logo_url;
+				});
+
+			}
+		});
+		}
+</script>
+<table cellpadding="1" cellspacing="1" width="100%" border="1">
+	<tr>
+		<td width="50%" align="center">
+			<strong>value:</strong>
+			<input type="text" size="25" id="function-value" name="function-value" value="" />
+			<input type="button" name="generate" value="generate" onclick="generateFunction();" />
+		</td>
+		<td width="50%" align="center"><br />
+			<img src="http://kinlane-productions.s3.amazonaws.com/logo-2015-02-02-12-26-31.png" id="function-logo" width="90%" />
+			<textarea rows="2" cols="35" id="function-url" style="width: 100%;"></textarea>
+		</td>
+	</tr>
+</table>
