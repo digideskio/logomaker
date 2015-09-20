@@ -1,2 +1,2 @@
-# logomaker
-This is my logomaker project.
+# Logo Maker
+This is my logo maker project.
