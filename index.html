@@ -15,12 +15,12 @@ title: Logomaker
 <script type="text/javascript">
 	function generateSingle()
 		{
-			
-		document.getElementById('single-logo').src = 'http://kinlane-productions.s3.amazonaws.com/logo-2015-02-02-12-20-04.png';	
-			
+
+		document.getElementById('single-logo').src = 'https://s3.amazonaws.com/kinlane-productions/logomaker/api-evangelist-logomaker-function.pngg';
+
 		$value = document.getElementById('single-value').value;
 		$apiurl = "http://logomaker.api.apievangelist.com/single/?value=" + encodeURIComponent($value);
-		
+
 		$.ajax({
 		url: $apiurl,
 		type: 'GET',
@@ -45,7 +45,7 @@ title: Logomaker
 			<input type="button" name="generate" value="generate" onclick="generateSingle();" />
 		</td>
 		<td width="60%" align="center"><br />
-			<img src="http://kinlane-productions.s3.amazonaws.com/logo-2015-02-02-11-58-00.png" id="single-logo" width="90%" />
+			<img src="https://s3.amazonaws.com/kinlane-productions/logomaker/api-evangelist-logomaker-single.png" id="single-logo" width="90%" />
 			<textarea rows="2" cols="35" id="single-url" style="width: 100%;"></textarea>
 		</td>
 	</tr>
@@ -55,13 +55,13 @@ title: Logomaker
 <script type="text/javascript">
 	function generateKeyValue()
 		{
-			
-		document.getElementById('keyvalue-logo').src = 'http://kinlane-productions.s3.amazonaws.com/logo-2015-02-02-12-20-04.png';	
-		
-		$key = document.getElementById('keyvalue-key').value;	
+
+		document.getElementById('keyvalue-logo').src = 'https://s3.amazonaws.com/kinlane-productions/logomaker/api-evangelist-key-value.png';
+
+		$key = document.getElementById('keyvalue-key').value;
 		$value = document.getElementById('keyvalue-value').value;
 		$apiurl = "http://logomaker.api.apievangelist.com/keyvalue/?key=" + encodeURIComponent($key) + "&value=" + encodeURIComponent($value);
-		
+
 		$.ajax({
 		url: $apiurl,
 		type: 'GET',
@@ -88,7 +88,7 @@ title: Logomaker
 			<input type="button" name="generate" value="generate" onclick="generateKeyValue();" />
 		</td>
 		<td width="60%" align="center"><br />
-			<img src="http://kinlane-productions.s3.amazonaws.com/logo-2015-02-02-12-26-06.png" id="keyvalue-logo" width="90%" />
+			<img src="https://s3.amazonaws.com/kinlane-productions/logomaker/api-evangelist-key-value.png" id="keyvalue-logo" width="90%" />
 			<textarea rows="2" cols="35" id="keyvalue-url" style="width: 100%;"></textarea>
 		</td>
 	</tr>
@@ -98,12 +98,12 @@ title: Logomaker
 <script type="text/javascript">
 	function generateFunction()
 		{
-			
-		document.getElementById('function-logo').src = 'http://kinlane-productions.s3.amazonaws.com/logo-2015-02-02-12-20-04.png';	
-			
+
+		document.getElementById('function-logo').src = 'https://s3.amazonaws.com/kinlane-productions/logomaker/api-evangelist-logomaker-function.pngg';
+
 		$value = document.getElementById('function-value').value;
 		$apiurl = "http://logomaker.api.apievangelist.com/function/?name=" + encodeURIComponent($value);
-		
+
 		$.ajax({
 		url: $apiurl,
 		type: 'GET',
